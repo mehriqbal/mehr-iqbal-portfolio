@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact details for M. Mehr Iqbal.">
+  <meta name="author" content="M. Mehr Iqbal">
+  <title>Contact | M. Mehr Iqbal</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">M. Mehr Iqbal</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="media.html">Favourite Media</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Contact</h1>
+      <p class="lead">Send a message or find me at the university.</p>
+    </section>
+
+    <section class="wrap">
+      <article class="panel">
+        <h2>My details</h2>
+        <p><strong>Name:</strong> M. Mehr Iqbal</p>
+        <p><strong>Designation:</strong> BS(CS) Student, 6th Semester</p>
+        <p><strong>Email:</strong> <a href="mailto:mehriqbal726@gmail.com">mehriqbal726@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+923222928697">0322 2928697</a></p>
+      </article>
+      <article class="panel">
+        <h2>Friends</h2>
+        <div class="table-scroll">
+          <table>
+            <caption>Friends' names and IDs</caption>
+            <thead><tr><th scope="col">Name</th><th scope="col">ID</th></tr></thead>
+            <tbody>
+              <tr><td>Umair</td><td>41000</td></tr>
+              <tr><td>Ali Ahmed</td><td>41001</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap single">
+      <h2>Find me here</h2>
+      <iframe class="map" title="Map of Iqra University Islamabad Campus H-9" src="https://maps.google.com/maps?q=Iqra+University+H-9+Islamabad&amp;output=embed" loading="lazy"></iframe>
+
+      <h2>Send a message</h2>
+      <form action="mailto:mehriqbal726@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2026 M. Mehr Iqbal (41483). CSC 337 Assignment 1, Iqra University Islamabad (H-9).</p>
+  </footer>
+</body>
+</html>

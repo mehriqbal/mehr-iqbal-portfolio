@@ -1,0 +1,141 @@
+/* M. Mehr Iqbal portfolio - CSC 337 Assignment 1 */
+:root {
+  --pitch: #1f4d3a;
+  --pitch-dark: #153627;
+  --ball: #b3262e;
+  --chalk: #f4f6f3;
+  --ink: #1d2420;
+  --line: #c9d3cc;
+  --space: 1rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--chalk);
+}
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.2; }
+a { color: var(--ball); }
+
+/* Positioning: sticky header; Flexbox: navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--pitch);
+  color: #fff;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.6rem var(--space);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.brand { color: #fff; font-family: Georgia, serif; font-size: 1.25rem; text-decoration: none; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem; }
+nav a { display: block; padding: 0.4rem 0.8rem; color: #fff; text-decoration: none; border-radius: 4px; }
+nav a:hover, nav a:focus-visible { background: var(--pitch-dark); }
+nav a[aria-current="page"] { border-bottom: 3px solid var(--ball); }
+
+.hero {
+  background: var(--pitch);
+  color: #fff;
+  padding: 3rem var(--space);
+  text-align: center;
+  border-bottom: 6px solid var(--ball);
+}
+.hero h1 { margin: 0 0 0.5rem; font-size: 2.4rem; }
+.lead { max-width: 60ch; margin: 0 auto; font-size: 1.1rem; }
+
+.wrap {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 var(--space);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.wrap.single { display: block; }
+
+.panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--pitch);
+  padding: 1.25rem;
+}
+.panel h2 { margin-top: 0; color: var(--pitch); }
+
+/* Tables */
+.table-scroll { overflow-x: auto; margin-bottom: 1.5rem; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+caption { text-align: left; font-weight: bold; padding: 0.4rem 0; }
+th, td { border: 1px solid var(--pitch); padding: 0.6rem 0.8rem; text-align: left; }
+th { background: var(--pitch); color: #fff; }
+tbody tr:nth-child(even) { background: #e8eee9; }
+tbody tr:hover { background: #f3d6d8; }
+
+/* Favourite Media: Grid two-column layout */
+.media-grid {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 var(--space);
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 2rem;
+}
+.post { background: #fff; border: 1px solid var(--line); padding: 1rem; margin-bottom: 1rem; }
+.post h3 { margin: 0 0 0.4rem; }
+.meta { font-size: 0.85rem; color: #55625a; margin: 0; }
+figure { margin: 0 0 1.5rem; }
+img { max-width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+figcaption { font-size: 0.9rem; padding-top: 0.3rem; color: #55625a; }
+.video { margin-bottom: 1.5rem; }
+.video h3 { margin: 0 0 0.4rem; }
+.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; }
+
+/* Contact */
+.map { width: 100%; height: 320px; border: 0; margin-bottom: 1.5rem; }
+form { max-width: 560px; display: flex; flex-direction: column; gap: 0.4rem; }
+label { font-weight: bold; }
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  font: inherit;
+  border: 2px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+}
+input:focus, textarea:focus { outline: none; border-color: var(--pitch); box-shadow: 0 0 0 3px rgba(31, 77, 58, 0.25); }
+button {
+  margin-top: 0.6rem;
+  padding: 0.7rem 1.2rem;
+  font: inherit;
+  font-weight: bold;
+  color: #fff;
+  background: var(--ball);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover, button:focus-visible { background: #8f1d24; }
+
+.site-footer { background: var(--pitch-dark); color: #fff; text-align: center; padding: 1.2rem var(--space); margin-top: 3rem; }
+.site-footer p { margin: 0; font-size: 0.9rem; }
+
+/* Responsive: no horizontal scroll at 375px */
+@media (max-width: 700px) {
+  .media-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.8rem; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  nav a { padding: 0.4rem 0.6rem; font-size: 0.95rem; }
+  .wrap { grid-template-columns: 1fr; }
+}
